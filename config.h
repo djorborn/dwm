@@ -34,11 +34,10 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating  ispermanent  monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           0, -1 },
-	{ "Chromium","crx_nckgahadagoaajjgafhacjanaoiihapd",NULL, 0,  1, 0, -1 },
-	{ "Google-chrome-beta","crx_nckgahadagoaajjgafhacjanaoiihapd",NULL, 0, 1,0,-1 },
-	{ "Gcolor3",  NULL,       NULL,       0,            1,         0,   -1 },
-	{ "Pavucontrol",  "pavucontrol", NULL, 0,            1,        0,    -1 },
+	{ "Gimp",     NULL,       NULL,       0,             1,              0,        -1 },
+	{ "Chromium","crx_nckgahadagoaajjgafhacjanaoiihapd",NULL, 0,  1,     0,        -1 },
+	{ "Gcolor3",  NULL,       NULL,       0,             1,              0,        -1 },
+	{ "Pavucontrol",  "pavucontrol", NULL, 0,            1,              0,        -1 },
 };
 
 /* layout(s) */
