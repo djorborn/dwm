@@ -1,4 +1,3 @@
-
 /* See LICENSE file for copyright and license details.
  *
  * dynamic window manager is designed like any other X client as well. It is
@@ -118,7 +117,7 @@ struct Client {
 	int basew, baseh, incw, inch, maxw, maxh, minw, minh;
 	int bw, oldbw;
 	unsigned int tags;
-	int isfixed, ispermanent, isfloating, isurgent, neverfocus, oldstate, isfullscreen, issticky;
+	int isfixed, isfloating, isurgent, neverfocus, oldstate, isfullscreen, issticky;
 	Client *next;
 	Client *snext;
 	Monitor *mon;
@@ -166,7 +165,6 @@ typedef struct {
 	const char *title;
 	unsigned int tags;
 	int isfloating;
-	int ispermanent;
 	int monitor;
 } Rule;
 
@@ -363,7 +361,6 @@ applyrules(Client *c)
 		&& (!r->instance || strstr(instance, r->instance)))
 		{
 			c->isfloating = r->isfloating;
-			c->ispermanent = r->ispermanent;
 			c->tags |= r->tags;
 			for (m = mons; m && m->num != r->monitor; m = m->next);
 			if (m)
@@ -1152,7 +1149,7 @@ keypress(XEvent *e)
 void
 killclient(const Arg *arg)
 {
-	if(!selmon->sel || selmon->sel->ispermanent)
+	if (!selmon->sel)
 		return;
 	if (!sendevent(selmon->sel->win, wmatom[WMDelete], NoEventMask, wmatom[WMDelete], CurrentTime, 0 , 0, 0)) {
 		XGrabServer(dpy);

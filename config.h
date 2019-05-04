@@ -33,12 +33,13 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating  ispermanent  monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           0, -1 },
-	{ "Chromium","crx_nckgahadagoaajjgafhacjanaoiihapd",NULL, 0,  1, 0, -1 },
-	{ "Google-chrome-beta","crx_nckgahadagoaajjgafhacjanaoiihapd",NULL, 0, 1,0,-1 },
-	{ "Gcolor3",  NULL,       NULL,       0,            1,         0,   -1 },
-	{ "Pavucontrol",  "pavucontrol", NULL, 0,            1,        0,    -1 },
+	/* class      instance    title       tags mask     isfloating    monitor */
+	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
+	{ "Chromium","crx_nckgahadagoaajjgafhacjanaoiihapd",NULL,                   1,          0,  -1 },
+	{ "Google-chrome-beta","crx_nckgahadagoaajjgafhacjanaoiihapd",NULL,       0,            1,   -1 },
+	{ "Firefox",  NULL,       NULL,       1 << 8,       0,            -1 },
+	{ "Gcolor3",  NULL,       NULL,       0,            1,            -1 },
+	{ "Pavucontrol",  "pavucontrol", NULL, 0,            1,            -1 },
 };
 
 /* layout(s) */
@@ -67,7 +68,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[]   = { "dmenu_recent", "-m", dmenumon, NULL };
-static const char *termcmd[]    = { "alacritty", NULL };
+static const char *termcmd[]    = { "st", NULL };
 static const char *chromium[]   = { "chromium", NULL };
 static const char *brightup[]   = { "xbacklight", "-inc", "5%", NULL };
 static const char *brightdown[] = { "xbacklight", "-dec", "5%", NULL };
