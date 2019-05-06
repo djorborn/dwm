@@ -37,6 +37,7 @@ static const Rule rules[] = {
 	{ "Gimp",     NULL,       NULL,       0,            1,              0,         -1 },
 	{ "Chromium","crx_nckgahadagoaajjgafhacjanaoiihapd",NULL, 0,  1,    0,         -1 },
 	{ "Gcolor3",  NULL,       NULL,       0,            1,              0,         -1 },
+	{ "Spotify",  NULL,       NULL,       0,       1,              0,         -1 },
 	{ "Pavucontrol",  "pavucontrol", NULL, 0,            1,             0,         -1 },
 };
 
