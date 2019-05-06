@@ -30,3 +30,10 @@ Keeping track of my take on each patch in the wiki.
  - I thought I would like the look but I found I like the square better.
 2. [focusonclick](http://dwm.suckless.org/patches/focusonclick/)
  - This one seemed to make it so I couldn't resize or move floating windows. I ended up just commenting out a line in dwm.c, more info in the wiki.
+
+
+## Building
+Still using make, the compiler has been changed to [tcc](https://bellard.org/tcc/). 
+
+## Install
+Also nothing changed, `sudo make clean install`
