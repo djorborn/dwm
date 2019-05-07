@@ -108,17 +108,17 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	{ 0,             XF86XK_AudioRaiseVolume, spawn,        {.v = volup } },
-	{ 0,             XF86XK_AudioLowerVolume, spawn,        {.v = voldown } },
-	{ 0,             XF86XK_AudioMute,       spawn,          {.v = volmute }  },
-	{ 0,             XF86XK_AudioPlay,       spawn,         {.v = musicplay } },
-	{ 0,             XF86XK_AudioNext,       spawn,         {.v = musicnext } },
-	{ 0,             XF86XK_AudioPrev,       spawn,         {.v = musicprev } },
-	{ 0,             XF86XK_MonBrightnessUp, spawn,        {.v = brightup } },
-	{ 0,             XF86XK_MonBrightnessDown, spawn,        {.v = brightdown } },
+	{ NULL,             XF86XK_AudioRaiseVolume, spawn,        {.v = volup } },
+	{ NULL,             XF86XK_AudioLowerVolume, spawn,        {.v = voldown } },
+	{ NULL,             XF86XK_AudioMute,       spawn,          {.v = volmute }  },
+	{ NULL,             XF86XK_AudioPlay,       spawn,         {.v = musicplay } },
+	{ NULL,             XF86XK_AudioNext,       spawn,         {.v = musicnext } },
+	{ NULL,             XF86XK_AudioPrev,       spawn,         {.v = musicprev } },
+	{ NULL,             XF86XK_MonBrightnessUp, spawn,        {.v = brightup } },
+	{ NULL,             XF86XK_MonBrightnessDown, spawn,        {.v = brightdown } },
 	{ MODKEY|ShiftMask,             XK_w,      spawn,          {.v = chromium } },
 	{ MODKEY|ShiftMask,             XK_d,      spawn,          {.v = clipmenu } },
-	{ 0,                         XK_Print,  spawn,          {.v = screenshot } },
+	{ NULL,                         XK_Print,  spawn,          {.v = screenshot } },
 	{ MODKEY|ShiftMask,             XK_Print,  spawn,          {.v = scrshotselect } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
@@ -130,7 +130,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_e,      quit,           {0} },
-	{ MODKEY|ShiftMask,             XK_r,      quit,           {1} },
+	{ MODKEY|ShiftMask,             XK_r,      quit,           {1} }, 
 };
 
 /* button definitions */
@@ -149,3 +149,4 @@ static Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 };
+
