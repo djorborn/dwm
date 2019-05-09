@@ -6,26 +6,26 @@
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
-static const unsigned int systrayspacing = 2;   /* systray spacing */
+static const unsigned int systrayspacing = 6;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static const int showsystray        = 1;     /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Hermit:size=12" };
 static const char dmenufont[]       = "Hermit:size=12";
-static const char col_gray1[]       = "#eeeeee";
-static const char col_gray2[]       = "#ffffff";
-static const char col_gray3[]       = "#333333";
-static const char col_gray4[]       = "#fafafa";
-static const char col_cyan[]        = "#776f77";
+static const char col_gray1[]       = "#23262E";
+static const char col_gray2[]       = "#D5CED9";
+static const char col_gray3[]       = "#f39c12";
+static const char col_gray4[]       = "#c74ded";
+static const char col_cyan[]        = "#00e8c6";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeNorm] = { col_gray2, col_gray1, col_gray1 },
+	[SchemeSel]  = { col_cyan, col_gray1,  col_gray4  },
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "", "💪", "3", "4", "5", "6", "7", "8", "9" };
 
 
 static const Rule rules[] = {
