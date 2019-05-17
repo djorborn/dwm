@@ -36,7 +36,7 @@ static const Rule rules[] = {
 
 	/* class      instance    title       tags mask     isfloating  ispermanent  monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           0,          -1 },
-	{ "Chromium",&hangouts,   NULL,       0,            1,           0,          -1 },
+	{  NULL,     &hangouts,   NULL,       0,            1,           0,          -1 },
 	{ "Gcolor3",  NULL,       NULL,       0,            1,           0,          -1 },
 	{ "Transmis*",NULL,       NULL,       0,            1,           0,          -1 },
 };
@@ -79,8 +79,8 @@ static const char *xf86_audioraisevolume[] = { "amixer", "set", "Master", "5%+",
 static const char *xf86_audiolowervolume[] = { "amixer", "set", "Master", "5%-", NULL };
 static const char *xf86_audiomute[] = { "amixer", "set", "Master", "toggle", NULL };
         /* Brightness */
-static const char *xf86_monbrightnessup[] = { "xbacklight", "inc", "5%", NULL };
-static const char *xf86_monbrightnessdown[] = { "xbacklight", "dec", "5%", NULL };
+static const char *xf86_monbrightnessup[] = { "xbacklight", "-inc", "5%", NULL };
+static const char *xf86_monbrightnessdown[] = { "xbacklight", "-dec", "5%", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
