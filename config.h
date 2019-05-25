@@ -14,11 +14,11 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Hermit:size=12" };
 static const char dmenufont[]       = "Hermit:size=12";
-static const char col_gray1[]       = "#23262E";
-static const char col_gray2[]       = "#D5CED9";
-static const char col_gray3[]       = "#FFE66D";
-static const char col_gray4[]       = "#C74DED";
-static const char col_cyan[]        = "#00E8C6";
+static const char col_gray1[]       = "#282a36";
+static const char col_gray2[]       = "#bbbbbb";
+static const char col_gray3[]       = "#f1fa8c";
+static const char col_gray4[]       = "#ff79c6";
+static const char col_cyan[]        = "#8be9fd";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray2, col_gray1, col_gray1 },
@@ -36,7 +36,8 @@ static const Rule rules[] = {
 
 	/* class      instance    title       tags mask     isfloating  ispermanent  monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           0,          -1 },
-	{  NULL,     &hangouts,   NULL,       0,            1,           0,          -1 },
+	{ "Chromium", "crx_nckgahadagoaajjgafhacjanaoiihapd",   
+				  NULL,       0,            1,           0,          -1 },
 	{ "Gcolor3",  NULL,       NULL,       0,            1,           0,          -1 },
 	{ "Transmis*",NULL,       NULL,       0,            1,           0,          -1 },
 };
