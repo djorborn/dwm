@@ -16,12 +16,12 @@ static const char *fonts[]          = { "Hermit:size=12" };
 static const char dmenufont[]       = "Hermit:size=12";
 static const char col_gray1[]       = "#282a36";
 static const char col_gray2[]       = "#bbbbbb";
-static const char col_gray3[]       = "#f1fa8c";
+static const char col_gray3[]       = "#383A46";
 static const char col_gray4[]       = "#ff79c6";
 static const char col_cyan[]        = "#8be9fd";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray2, col_gray1, col_gray1 },
+	[SchemeNorm] = { col_gray2, col_gray3, col_gray1 },
 	[SchemeSel]  = { col_cyan, col_gray1,  col_gray4  },
 };
 
@@ -45,7 +45,7 @@ static const Rule rules[] = {
 /* layout(s) */
 static const float mfact     = 0.50; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
-static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
+static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
@@ -68,10 +68,11 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_recent", NULL };
-static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[]  = { "alacritty", NULL };
 static const char *browsercmd[] = { "chromium", NULL };
 static const char *filemanagercmd[] = { "pcmanfm", NULL };
 static const char *clipmenucmd[] = { "clipmenu", NULL };
+static const char *st[] = { "st", NULL };
 /* XF86 commands  */
 static const char *xf86_audioplay[] = { "playerctl", "play-pause", NULL };
 static const char *xf86_audionext[] = { "playerctl", "next", NULL };
@@ -132,7 +133,8 @@ static Key keys[] = {
 														/*    Custom Bindings   */
 	{ MODKEY|ShiftMask,             XK_w,      spawn,          {.v = browsercmd } },
 	{ MODKEY|ShiftMask,             XK_f,      spawn,          {.v = filemanagercmd } },
-	{ MODKEY|ShiftMask,             XK_d,      spawn,          {.v = clipmenucmd } }
+	{ MODKEY|ShiftMask,             XK_d,      spawn,          {.v = clipmenucmd } },
+	{ MODKEY|ShiftMask,             XK_u,      spawn,          {.v = st } },
 };
 
 /* button definitions */
