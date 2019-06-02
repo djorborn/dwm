@@ -23,7 +23,10 @@ Keeping track of my take on each patch in the wiki.
   - this with ispermanent works like a charm.
   
 7. [systray](http://dwm.suckless.org/patches/systray/)
-  - A must for me, foe now anyway
+  - System Tray, A must for me, for now anyway
+  
+8. [stackmfact](http://dwm.suckless.org/patches/stackmfact/)
+  - vertically resize clients in the stack
 
 ### Did Not Keep
 1. [activetagindicatorbar](http://dwm.suckless.org/patches/activetagindicatorbar/)
