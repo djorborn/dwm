@@ -12,7 +12,7 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray        = 1;        /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const unsigned int minwsz    = 20;       /* Minimal heigt of a client for smfact */
+static const unsigned int minwsz    = 10;       /* Minimal heigt of a client for smfact */
 static const char *fonts[]          = { "Hermit:size=12" };
 static const char dmenufont[]       = "Hermit:size=12";
 static const char col_gray1[]       = "#282a36";
@@ -37,10 +37,11 @@ static const Rule rules[] = {
 
 	/* class      instance    title       tags mask     isfloating  ispermanent  monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           0,          -1 },
-	{ "Chromium", "crx_nckgahadagoaajjgafhacjanaoiihapd",   
-				  NULL,       0,            1,           0,          -1 },
+	{ "Chromium", "crx_nckgahadagoaajjgafhacjanaoiihapd" ,/* Next Line .............  
+	...Chromium      */       NULL,       0,            1,           0,          -1 },
 	{ "Gcolor3",  NULL,       NULL,       0,            1,           0,          -1 },
 	{ "Transmis*",NULL,       NULL,       0,            1,           0,          -1 },
+	{ "Tilda",    NULL,       NULL,       0,            1,           1,          -1 }
 };
 
 /* layout(s) */
@@ -78,9 +79,14 @@ static const char *st[] = { "st", NULL };
 static const char *xf86_audioplay[] = { "playerctl", "play-pause", NULL };
 static const char *xf86_audionext[] = { "playerctl", "next", NULL };
 static const char *xf86_audioprev[] = { "playerctl", "previous", NULL };
-static const char *xf86_audioraisevolume[] = { "amixer", "set", "Master", "5%+", NULL };
-static const char *xf86_audiolowervolume[] = { "amixer", "set", "Master", "5%-", NULL };
-static const char *xf86_audiomute[] = { "amixer", "set", "Master", "toggle", NULL };
+/* PULSEAUDIO */
+static const char *xf86_audioraisevolume[] = { "pactl", "set-sink-volume", "0", "+5%", NULL };
+static const char *xf86_audiolowervolume[] = { "pactl", "set-sink-volume", "0", "-5%", NULL };
+static const char *xf86_audiomute[] = { "pactl", "set-sink-mute", "0", "toggle", NULL };
+/* ALSA */
+/* static const char *xf86_audioraisevolume[] = { "amixer", "set", "Master", "5%+", NULL }; */
+/* static const char *xf86_audiolowervolume[] = { "amixer", "set", "Master", "5%-", NULL }; */
+/* static const char *xf86_audiomute[] = { "amixer", "set", "Master", "toggle", NULL }; */
         /* Brightness */
 static const char *xf86_monbrightnessup[] = { "xbacklight", "-inc", "5%", NULL };
 static const char *xf86_monbrightnessdown[] = { "xbacklight", "-dec", "5%", NULL };
