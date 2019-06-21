@@ -70,7 +70,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_recent", NULL };
-static const char *termcmd[]  = { "alacritty", NULL };
+static const char *alacrittycmd[]  = { "alacritty", NULL };
 static const char *browsercmd[] = { "chromium", NULL };
 static const char *filemanagercmd[] = { "pcmanfm", NULL };
 static const char *clipmenucmd[] = { "clipmenu", NULL };
@@ -94,7 +94,7 @@ static const char *xf86_monbrightnessdown[] = { "xbacklight", "-dec", "5%", NULL
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
-	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY,                       XK_Return, spawn,          {.v = st } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_Left,   focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_Right,  focusstack,     {.i = -1 } },
