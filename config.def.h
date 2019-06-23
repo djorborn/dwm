@@ -74,7 +74,7 @@ static const char *alacrittycmd[]  = { "alacritty", NULL };
 static const char *browsercmd[] = { "chromium", NULL };
 static const char *filemanagercmd[] = { "pcmanfm", NULL };
 static const char *clipmenucmd[] = { "clipmenu", NULL };
-static const char *st[] = { "st", NULL };
+static const char *termcmd[] = { "st", NULL };
 /* XF86 commands  */
 static const char *xf86_audioplay[] = { "playerctl", "play-pause", NULL };
 static const char *xf86_audionext[] = { "playerctl", "next", NULL };
@@ -94,10 +94,12 @@ static const char *xf86_monbrightnessdown[] = { "xbacklight", "-dec", "5%", NULL
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
-	{ MODKEY,                       XK_Return, spawn,          {.v = st } },
+	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_Left,   focusstack,     {.i = +1 } },
+	{ MODKEY,                       XK_h,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_Right,  focusstack,     {.i = -1 } },
+	{ MODKEY,                       XK_l,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_o,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
@@ -143,7 +145,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_w,      spawn,          {.v = browsercmd } },
 	{ MODKEY|ShiftMask,             XK_f,      spawn,          {.v = filemanagercmd } },
 	{ MODKEY|ShiftMask,             XK_d,      spawn,          {.v = clipmenucmd } },
-	{ MODKEY|ShiftMask,             XK_u,      spawn,          {.v = st } },
+	{ MODKEY|ShiftMask,             XK_u,      spawn,          {.v = alacrittycmd } },
 };
 
 /* button definitions */

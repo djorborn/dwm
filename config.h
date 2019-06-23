@@ -70,11 +70,11 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_recent", NULL };
-static const char *termcmd[]  = { "alacritty", NULL };
+static const char *alacrittycmd[]  = { "alacritty", NULL };
 static const char *browsercmd[] = { "chromium", NULL };
 static const char *filemanagercmd[] = { "pcmanfm", NULL };
 static const char *clipmenucmd[] = { "clipmenu", NULL };
-static const char *st[] = { "st", NULL };
+static const char *termcmd[] = { "st", NULL };
 /* XF86 commands  */
 static const char *xf86_audioplay[] = { "playerctl", "play-pause", NULL };
 static const char *xf86_audionext[] = { "playerctl", "next", NULL };
@@ -143,7 +143,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_w,      spawn,          {.v = browsercmd } },
 	{ MODKEY|ShiftMask,             XK_f,      spawn,          {.v = filemanagercmd } },
 	{ MODKEY|ShiftMask,             XK_d,      spawn,          {.v = clipmenucmd } },
-	{ MODKEY|ShiftMask,             XK_u,      spawn,          {.v = st } },
+	{ MODKEY|ShiftMask,             XK_u,      spawn,          {.v = alacrittycmd } },
 };
 
 /* button definitions */
