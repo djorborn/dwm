@@ -74,7 +74,7 @@ static const char *alacrittycmd[]  = { "alacritty", NULL };
 static const char *browsercmd[] = { "chromium", NULL };
 static const char *filemanagercmd[] = { "pcmanfm", NULL };
 static const char *clipmenucmd[] = { "clipmenu", NULL };
-static const char *termcmd[] = { "st", NULL };
+static const char *stcmd[] = { "st", NULL };
 /* XF86 commands  */
 static const char *xf86_audioplay[] = { "playerctl", "play-pause", NULL };
 static const char *xf86_audionext[] = { "playerctl", "next", NULL };
@@ -94,7 +94,7 @@ static const char *xf86_monbrightnessdown[] = { "xbacklight", "-dec", "5%", NULL
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
-	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY,                       XK_Return, spawn,          {.v = alacrittycmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_Left,   focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
@@ -145,7 +145,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_w,      spawn,          {.v = browsercmd } },
 	{ MODKEY|ShiftMask,             XK_f,      spawn,          {.v = filemanagercmd } },
 	{ MODKEY|ShiftMask,             XK_d,      spawn,          {.v = clipmenucmd } },
-	{ MODKEY|ShiftMask,             XK_u,      spawn,          {.v = alacrittycmd } },
+	{ MODKEY|ShiftMask,             XK_u,      spawn,          {.v = stcmd } },
 };
 
 /* button definitions */
@@ -155,7 +155,7 @@ static Button buttons[] = {
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
 	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
-	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
+	{ ClkStatusText,        0,              Button2,        spawn,          {.v = alacrittycmd } },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
 	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
