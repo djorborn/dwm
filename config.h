@@ -94,7 +94,7 @@ static const char *xf86_monbrightnessdown[] = { "xbacklight", "-dec", "5%", NULL
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
-	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
+	{ MODKEY,                       XK_Return, spawn,          {.v = alacrittycmd} },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_Left,   focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
@@ -145,7 +145,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_w,      spawn,          {.v = browsercmd } },
 	{ MODKEY|ShiftMask,             XK_f,      spawn,          {.v = filemanagercmd } },
 	{ MODKEY|ShiftMask,             XK_d,      spawn,          {.v = clipmenucmd } },
-	{ MODKEY|ShiftMask,             XK_u,      spawn,          {.v = alacrittycmd } },
+	{ MODKEY|ShiftMask,             XK_u,      spawn,          {.v = termcmd} },
 };
 
 /* button definitions */
