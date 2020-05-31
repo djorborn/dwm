@@ -13,8 +13,8 @@ static const int showsystray        = 1;        /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const unsigned int minwsz    = 10;       /* Minimal heigt of a client for smfact */
-static const char *fonts[]          = { "Hermit:size=12" };
-static const char dmenufont[]       = "Hermit:size=12";
+static const char *fonts[]          = { "Hermit:size=10" };
+static const char dmenufont[]       = "Hermit:size=10";
 static const char col_gray1[]       = "#282a36";
 static const char col_gray2[]       = "#bbbbbb";
 static const char col_gray3[]       = "#383A46";
@@ -69,8 +69,10 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_recent", NULL };
+static const char *dmenucmd[] = { "dmenu_run", NULL };
+static const char *dmenu_recent[] = { "dmenu_recent", NULL };
 static const char *alacrittycmd[]  = { "alacritty", NULL };
+static const char *st[]  = { "st", NULL };
 static const char *browsercmd[] = { "chromium", NULL };
 static const char *filemanagercmd[] = { "pcmanfm", NULL };
 static const char *clipmenucmd[] = { "clipmenu", NULL };
@@ -93,8 +95,9 @@ static const char *xf86_monbrightnessdown[] = { "xbacklight", "-dec", "5%", NULL
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
-	{ MODKEY,                       XK_Return, spawn,          {.v = alacrittycmd} },
+	{ MODKEY,                       XK_d,      spawn,          {.v = dmenu_recent } },
+	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
+	{ MODKEY,                       XK_Return, spawn,          {.v = st} },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_Left,   focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
