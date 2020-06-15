@@ -13,12 +13,12 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=10" };
 static const char dmenufont[]       = "monospace:size=10";
-static char normbgcolor[]           = "#323232";
-static char normbordercolor[]       = "#404040";
+static char normbgcolor[]           = "#292A2B";
+static char normbordercolor[]       = "#b084eb";
 static char normfgcolor[]           = "#808080";
 static char selfgcolor[]            = "#ffffff";
-static char selbordercolor[]        = "#e0cf9f";
-static char selbgcolor[]            = "#e0cf9f";
+static char selbordercolor[]        = "#ffb86c";
+static char selbgcolor[]            = "#e6550d";
 static char *colors[][3] = {
        /*               fg           bg           border   */
        [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
@@ -41,7 +41,9 @@ static const Rule rules[] = {
 	---^^^^^^^^^^^^^^^^^^^^^*/NULL,       0,            1,           -1 },
 	{ "TelegramDesktop", /*---------------------------------------------
 	---^^^^^^^^^*/NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+/*	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },     */
+	{ NULL,       NULL,       "Terminator Preferences",/*----------------
+	---------------------------^^^^^^^^*/ 0,            1,           -1 },
 };
 
 /* layout(s) */
